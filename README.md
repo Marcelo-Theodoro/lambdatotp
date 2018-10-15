@@ -31,11 +31,16 @@ To register a new user send a `POST` request to the root path of your applicatio
 
 ```json
 {
-    "user_id": "marcelotheodoro@outlook.com",  // The user id you have registred your user
-    "qr_code": "",  // The code used to create the QRcode image
-    "qr_code_url": ""  // The QRcode image that your user must read in his TOTP app to generate the Time Based One Time Password
+    "user_id": "marcelotheodoro@outlook.com",
+    "qr_code": "",
+    "qr_code_url": ""
 }
 ```
+ - user_id: The user id you have registred your user
+ - qr_code: The code used to create the QRcode image
+ - qr_code_url: The QRcode image that your user must read in his TOTP app to generate the Time Based One Time Password
+
+
 
 The application will return an HTTP Conflict error in case the user is already registered.
 
