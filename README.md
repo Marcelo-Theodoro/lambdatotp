@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Marcelo-Theodoro/lambdatotp.svg?branch=master)](https://travis-ci.org/Marcelo-Theodoro/lambdatotp)
+
 ## lambdatotp
 
 An easy implementation of [TOTP](https://en.wikipedia.org/wiki/Time-based_One-time_Password_algorithm) to be used in the AWS Lambda and DynamoDB.
