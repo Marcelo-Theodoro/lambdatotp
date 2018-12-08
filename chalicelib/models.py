@@ -4,7 +4,7 @@ from boto3.dynamodb.conditions import Key
 
 from pyotp import random_base32
 
-from chalicelib.util import log
+from chalicelib.utils import log
 
 from chalicelib.config import REGION, TABLE_NAME
 

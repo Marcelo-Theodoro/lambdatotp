@@ -2,4 +2,4 @@ boto3
 chalice
 pyotp
 pytest
-pytest-mock
+pytest-cov

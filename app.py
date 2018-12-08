@@ -9,9 +9,7 @@ app = Chalice(app_name="lambdatotp")
 @app.route("/", methods=["POST"])
 def create_user():
 
-    body = app.current_request.json_body
-
-    user_id = body.get("user")
+    user_id = app.current_request.json_body.get("user")
     if not user_id:
         raise BadRequestError("No user found in the request body")
 
