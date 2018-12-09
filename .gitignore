@@ -1,3 +1,7 @@
+# Chalice things
+.chalice/deployed/*
+.chalice/deployments/*
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
