@@ -21,7 +21,7 @@ def create_new_user(user_id):
 
 def verify_user_code(user_id, code):
     user = DATABASE.get_user(user_id)
-    return TOTP(user["secret"]).verify(code)
+    return {"code_is_valid": TOTP(user["secret"]).verify(code)}
 
 
 def delete_user(user_id):

@@ -39,11 +39,11 @@ def test_verify_user_code(verify_mock, get_user_mock):
     verify_mock.return_value = True
 
     response = verify_user_code(user_id, user_code)
-    assert response is True
+    assert response == {"code_is_valid": True}
 
     verify_mock.return_value = False
     response = verify_user_code(user_id, user_code)
-    assert response is False
+    assert response == {"code_is_valid": False}
 
 
 @patch("chalicelib.models.DATABASE.delete_user")

@@ -1,6 +1,6 @@
 import botocore
 import boto3
-from boto3.dynamodb.conditions import Key
+from boto3.dynamodb.conditions import Key  # noqa
 
 from pyotp import random_base32
 
@@ -15,7 +15,7 @@ class TOTPBase:
         self.table = self.database.Table(table_name)
 
     def get_user(self, user_id):
-        item = self.table.get_item(Key("user_id").eq(user_id))
+        item = self.table.get_item(Key={"user_id": user_id})
 
         try:
             return item["Item"]
@@ -42,7 +42,7 @@ class TOTPBase:
     def delete_user(self, user_id):
         try:
             self.table.delete_item(
-                Key("user_id").eq(user_id),
+                Key={"user_id": user_id},
                 ConditionExpression="attribute_exists(user_id)",
             )
         except botocore.exceptions.ClientError as err:
