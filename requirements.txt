@@ -24,5 +24,5 @@ python-dateutil==2.7.5    # via botocore
 s3transfer==0.1.13        # via boto3
 six==1.11.0               # via chalice, more-itertools, pytest, python-dateutil
 typing==3.6.4             # via chalice
-urllib3==1.24.1           # via botocore
+urllib3==1.24.2           # via botocore
 wheel==0.32.3             # via chalice
