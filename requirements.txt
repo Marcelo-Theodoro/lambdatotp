@@ -4,25 +4,61 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
-atomicwrites==1.2.1       # via pytest
-attrs==17.4.0             # via chalice, pytest
+atomicwrites==1.2.1
+    # via pytest
+attrs==17.4.0
+    # via
+    #   chalice
+    #   pytest
 boto3==1.9.62
-botocore==1.12.62         # via boto3, chalice, s3transfer
+    # via -r requirements.in
+botocore==1.12.62
+    # via
+    #   boto3
+    #   chalice
+    #   s3transfer
 chalice==1.6.1
-click==6.7                # via chalice
-coverage==4.5.2           # via pytest-cov
-docutils==0.14            # via botocore
-enum-compat==0.0.2        # via chalice
-jmespath==0.9.3           # via boto3, botocore, chalice
-more-itertools==4.3.0     # via pytest
-pluggy==0.8.0             # via pytest
-py==1.7.0                 # via pytest
+    # via -r requirements.in
+click==6.7
+    # via chalice
+coverage==4.5.2
+    # via pytest-cov
+docutils==0.14
+    # via botocore
+enum-compat==0.0.2
+    # via chalice
+jmespath==0.9.3
+    # via
+    #   boto3
+    #   botocore
+    #   chalice
+more-itertools==4.3.0
+    # via pytest
+pluggy==0.8.0
+    # via pytest
+py==1.7.0
+    # via pytest
 pyotp==2.2.7
-pytest-cov==2.6.0
+    # via -r requirements.in
 pytest==4.0.1
-python-dateutil==2.7.5    # via botocore
-s3transfer==0.1.13        # via boto3
-six==1.11.0               # via chalice, more-itertools, pytest, python-dateutil
-typing==3.6.4             # via chalice
-urllib3==1.24.1           # via botocore
-wheel==0.32.3             # via chalice
+    # via
+    #   -r requirements.in
+    #   pytest-cov
+pytest-cov==2.6.0
+    # via -r requirements.in
+python-dateutil==2.7.5
+    # via botocore
+s3transfer==0.1.13
+    # via boto3
+six==1.11.0
+    # via
+    #   chalice
+    #   more-itertools
+    #   pytest
+    #   python-dateutil
+typing==3.6.4
+    # via chalice
+urllib3==1.24.1
+    # via botocore
+wheel==0.38.1
+    # via chalice
